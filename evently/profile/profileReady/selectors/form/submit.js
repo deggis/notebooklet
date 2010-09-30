@@ -1,8 +1,9 @@
 function() {
   var form = $(this);
-  var fdoc = form.serializeObject();
+  var fdoc = new Object();
   fdoc.created_at = new Date();
-  fdoc.profile = $$("#profile").profile;
+  fdoc.note = $("#note").val();
+  fdoc.tags = $("#tags").val().split(" ");
   $$(this).app.db.saveDoc(fdoc, {
     success : function() {
       form[0].reset();
