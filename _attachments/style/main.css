@@ -42,8 +42,7 @@ ul#mainmenu li a {
     background: none repeat scroll 0 0 #E5D7AF;
 	color: #846D26;
     display: inline-block;
-    min-width: 6em;
-    padding: 7px;
+    padding: 7px 12px 7px 12px;
     white-space: normal;
 	text-transform: uppercase;
 	text-decoration: none;
