@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Notebooklet</title>
+        <link rel="stylesheet" href="style/main.css" type="text/css"></head>
+    <body>
+        <div id="body">
+            <div id="header">
+                <div id="account"></div>
+                <h1>Notebooklet</h1>
+                <div id="profile"></div>
+            </div>
+			<div id="menu_container">
+				<ul id="mainmenu">
+					<li><a href="">New note</a></li>
+					<li><a href="">Search notes</a></li>
+				</ul>
+				</div>
+            <div id="content">
+                <div id="items"></div>
+            </div>
+        </div>
+    </body>
+    <script src="vendor/couchapp/loader.js"></script>
+    <script type="text/javascript" charset="utf-8">
+        $.couch.app(function(app){
+            $("#account").evently("account", app);
+            $("#profile").evently("profile", app);
+            $.evently.connect("#account", "#profile", ["loggedIn", "loggedOut"]);
+            $("#items").evently("items", app);
+        });
+    </script>
+</html>
