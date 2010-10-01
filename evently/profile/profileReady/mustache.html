@@ -4,10 +4,14 @@
 	</label>
 	<textarea name="note" id="note" cols="80" rows="6"></textarea>
 	<br />
-	<label for="tags">
-		Tags:
+	<label for="env">
+		Env:
 	</label>
-	<input type="text" id="tags" name="tags" size="60" />
+	<select name="env" id="env">
+		<option value="koti">koti</option>
+		<option value="työ">työ</option>
+		<option value="känny">känny</option>
+	</select> (selection will be saved as cookie/similar/local memory)
 	<br />
 	<button id="save">Save</button>
 </form>

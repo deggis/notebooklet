@@ -3,7 +3,7 @@ function() {
   var fdoc = new Object();
   fdoc.created_at = new Date();
   fdoc.note = $("#note").val();
-  fdoc.tags = $("#tags").val().split(" ");
+  fdoc.env = $("#env").val();
   $$(this).app.db.saveDoc(fdoc, {
     success : function() {
       form[0].reset();
