@@ -1,26 +1,51 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
     <head>
         <title>Notebooklet</title>
         <link rel="stylesheet" href="style/main.css" type="text/css"></head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <body>
         <div id="body">
             <div id="header">
                 <h1>Notebooklet</h1>
             </div>
-			<div id="menu_container">
-				<ul id="mainmenu">
-					<li><a href="">New</a></li>
-					<li><a href="">Search</a></li>
-					<li><a href="">All</a></li>
-				</ul>
-				</div>
-            <div id="content">
-            	<div id="account"></div>
-            	<div id="profile"></div>
-                <div id="items"></div>
+            <div id="menu_container">
+                <ul id="mainmenu">
+                    <li>
+                        <a id="menu_new" class="selected" href="javascript:menu('new');">New</a>
+                    </li>
+                    <li>
+                        <a id="menu_search" href="javascript:menu('search');">Search</a>
+                    </li>
+                    <li>
+                        <a id="menu_all" href="javascript:menu('all');">All</a>
+                    </li>
+                    <li>
+                        <a id="menu_settings" href="javascript:menu('settings');">Settings</a>
+                    </li>
+                </ul>
             </div>
-			<div id="clear"></div>
+            <div id="content">
+                <div id="content_new" class="content_box">
+                	<h2>New</h2>
+                    <div id="account"></div>
+                    <div id="profile"></div>
+                    <div id="items"></div>
+                </div>
+				<div id="content_search" class="content_box">
+					<h2>Search</h2>
+					<p>Sit etitään.</p>
+				</div>
+				<div id="content_all" class="content_box">
+					<h2>All</h2>
+					<p>All notes are displayed paginated here.</p>
+				</div>
+				<div id="content_settings" class="content_box">
+					<h2>Settings</h2>
+					<p>Here the settings can be pimp'd.</p>
+				</div>
+            </div>
+            <div id="clear"></div>
         </div>
     </body>
     <script src="vendor/couchapp/loader.js"></script>
@@ -31,5 +56,13 @@
             $.evently.connect("#account", "#profile", ["loggedIn", "loggedOut"]);
             $("#items").evently("items", app);
         });
+		var selected = "new";
+		function menu(new_selected) {
+			$("ul#mainmenu > li > a").removeClass("selected");
+			$("#menu_"+new_selected).addClass("selected");
+			$("#content_"+selected).hide();
+			$("#content_"+new_selected).show();
+			selected = new_selected;
+		}
     </script>
 </html>

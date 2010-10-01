@@ -48,7 +48,11 @@ ul#mainmenu li a {
 	text-decoration: none;
 }
 
-ul#mainmenu li .selected a, ul#mainmenu li a:hover {
+.content_box {
+	display: none;
+}
+
+ul#mainmenu li a.selected, ul#mainmenu li a:hover {
     background: none repeat scroll 0 0 #846D26;
     color: #E5D7AF;
 }
