@@ -1,32 +1,44 @@
 /* add styles here */
 body {
-    font: 1em Helvetica, sans-serif;
+    font-family: Arial,Liberation Sans,DejaVu Sans,sans-serif;
     padding: 4px;
-	background: none repeat scroll 0 0 #E0E0E0;
+	background: none repeat scroll 0 0 #fff;
 }
 
 div#body {
     margin-left: auto;
     margin-right: auto;
     width: 800px;
-    border: 1px solid #555;
-}
-
-div#menu_container {
-    background: none repeat scroll 0 0 #E5D7AF;
 }
 
 div#header {
-	background: none repeat scroll 0 0 #DEBA90;
 	margin: 0;
 	padding: 10px;
+	border-bottom: 1px solid #000;
 }
 
 div#content {
 	padding: 5px;
 }
 
+h1 {
+    margin: 0;
+	letter-spacing: 0px;
+	display: inline;
+	clear: none;
+}
+
+div#menuleft {
+	align: left;
+	float: left;
+}
+div#menuright {
+	align: right;
+	float: right;
+}
+
 ul#mainmenu {
+	clear: right;
     list-style: none outside none;
 	margin: 0 0 1em 0;
 	padding: 0;
@@ -39,13 +51,14 @@ ul#mainmenu li {
 }
 
 ul#mainmenu li a {
-    background: none repeat scroll 0 0 #E5D7AF;
-	color: #846D26;
+    background: none repeat scroll 0 0 #888;
+	color: #fff;
     display: inline-block;
     padding: 7px 12px 7px 12px;
     white-space: normal;
 	text-transform: uppercase;
 	text-decoration: none;
+	margin: 0;
 }
 
 .content_box {
@@ -53,13 +66,8 @@ ul#mainmenu li a {
 }
 
 ul#mainmenu li a.selected, ul#mainmenu li a:hover {
-    background: none repeat scroll 0 0 #846D26;
+    background: none repeat scroll 0 0 #FF9900;
     color: #E5D7AF;
-}
-
-h1 {
-    margin: 0;
-	letter-spacing: 0px;
 }
 
 #account {
@@ -133,7 +141,7 @@ div.avatar img {
     height: 40px;
 }
 
-div#clear {
+div.clear {
 	clear: both;
 }
 
