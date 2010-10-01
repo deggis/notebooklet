@@ -101,6 +101,9 @@ h1 {
 #items ul {
 	padding: 0;
 }
+span#tags {
+	color: #888;
+}
 
 form {
     padding: 4px;

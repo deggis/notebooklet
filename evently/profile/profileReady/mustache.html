@@ -2,7 +2,12 @@
 	<label for="note">
 		Note:
 	</label>
-	<textarea name="note" id="note" cols="80" rows="6"></textarea>
+	<textarea name="note" id="note" cols="80" rows="6" onchange="updateTags();" onkeyup="updateTags();"></textarea>
+	<br />
+	<label for="tags">
+		Tags:
+	</label>
+	<span id="tags">(type words with #hash prefix to add tags)</span>
 	<br />
 	<label for="env">
 		Env:
@@ -15,5 +20,8 @@
 	<br />
 	<button id="save">Save</button>
 </form>
+
+<script type="text/javascript">
+</script>
 
 <div style="clear:left;"></div>

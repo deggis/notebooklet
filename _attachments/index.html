@@ -64,5 +64,17 @@
 			$("#content_"+new_selected).show();
 			selected = new_selected;
 		}
+		
+		function updateTags() {
+			tags = $("#note").val().match(/\#[a-z]+/g);
+			if (tags) {
+				tags = tags.join(", ");
+			}
+			else {
+				tags = '(type words with #hash prefix to add tags)';
+			}
+			$("#tags").html(tags);
+		}
+		// $("#note").bind("change", updateTags);
     </script>
 </html>

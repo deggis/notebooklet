@@ -9,6 +9,7 @@ function() {
   $$(this).app.db.saveDoc(fdoc, {
     success : function() {
       form[0].reset();
+	  updateTags();
     }
   });
   return false;
