@@ -55,6 +55,11 @@
             </div>
             <div class="clear"></div>
         </div>
+		
+		<div id="note_view_dialog" title="Note view">
+			<p>Placeholder.</p>
+		</div>
+		
     </body>
     <script src="vendor/couchapp/loader.js"></script>
     <script type="text/javascript" charset="utf-8">
@@ -73,6 +78,11 @@
             $("#content_" + new_selected).show();
             selected = new_selected;
         }
+		
+		function view_note(id) {
+			var dialog_div = $("#note_view_dialog");
+			dialog_div.dialog();
+		}
         
         function updateTags(){
             tags = $("#note").val().match(/\#[a-z]+/g);

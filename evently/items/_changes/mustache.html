@@ -1,12 +1,15 @@
-<div id="recent-notes-set">
+<table>
+    <caption>Recent notes</caption>
+    <tr>
+        <th id="note_col">Note</th>
+        <th id="tag_col">Tags</th>
+        <th id="last_modified_col">Last modified</th>
+    </tr>
     {{#items}}
-    <div class="ui-widget-content">
-        <p>{{note_start}}</p>
-    </div>
+    <tr onclick="javascript:view_note('{{id}}');">
+        <td>{{note_start}}</td>
+        <td>{{tags}}</td>
+        <td>{{last_updated}}</td>
+    </tr>
     {{/items}}
-</div>
-<script type="text/javascript">
-	$(function() {
-		$( "#recent-notes-set div" ).draggable({ stack: "#recent-notes-set div" });
-	});
-</script>
+</table>

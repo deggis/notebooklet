@@ -129,15 +129,20 @@ div.clear {
 }
 
 th#note_col {
-    width: 500px;
+    width: 400px;
 }
 
 th#tag_col {
-    width: 200px;
+    width: 250px;
 }
 
 th#last_modified_col {
-    width: 90px;
+    width: 150px;
+}
+
+#items tr:hover {
+	background-color: #fed;
+	cursor: pointer;
 }
 
 div#recent-notes-set {
@@ -158,3 +163,6 @@ div#recent-notes-set div {
     margin: 0 10px 10px 0;
 }
 
+#note_view_dialog {
+	display: none;
+}

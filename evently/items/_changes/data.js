@@ -17,6 +17,7 @@ function(data) {
 	  else {
 	  	p.last_updated = r.value.created_at;
 	  }
+	  p.id = r.value._id;
       return p;
     })
   }
