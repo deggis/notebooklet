@@ -6,10 +6,10 @@ function couchapp_load(scripts) {
 };
 
 couchapp_load([
-  "/_utils/script/sha1.js",
-  "/_utils/script/json2.js",
-  "/_utils/script/jquery.js",
-  "/_utils/script/jquery.couch.js",
+  "vendor/couchapp/sha1.js",
+  "vendor/couchapp/json2.js",
+  "vendor/couchapp/jquery.js",
+  "vendor/couchapp/jquery.couch.js",
   "vendor/couchapp/jquery.couch.app.js",
   "vendor/couchapp/jquery.couch.app.util.js",
   "vendor/couchapp/jquery.mustache.js",
