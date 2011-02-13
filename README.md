@@ -9,6 +9,12 @@ JavaScript application delivered straight from CouchDB, so there's no
 extra application servers needed. Decision to use CouchDB was originally
 based on the easiness of replication with it.
 
+CouchDB is now automatically bundled with Ubuntu and installing CouchDB
+is possible on Android phones, which make CouchDB an attractive choise
+as DB backend for personal notes. Ideally, Notebooklet could be installed
+in every workstation to enable local use and get benefits from CouchDB's
+easy replication.
+
 Development status: currently deploying & usage needs knowledge of
 CouchApps, not all of the basic functionalities are ready.
 
