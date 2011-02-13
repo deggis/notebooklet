@@ -38,7 +38,7 @@
                 <div id="content_new" class="content_box">
                     <h2>New</h2>
                     <div id="newnote"></div>
-                    <div id="items"></div>
+                    <div id="recent_notes"></div>
                 </div>
                 <div id="content_search" class="content_box">
                     <h2>Search</h2>
@@ -67,7 +67,7 @@
             $("#account").evently("account", app);
             $("#profile").evently("profile", app);
             $.evently.connect("#account", "#profile", ["loggedIn", "loggedOut"]);
-            $("#items").evently("items", app);
+            $("#recent_notes").evently("recent_items", app);
             $("#newnote").evently("newnote", app);
         });
         var selected = "new";
