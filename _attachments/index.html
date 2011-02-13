@@ -67,7 +67,7 @@
             $("#account").evently("account", app);
             $("#profile").evently("profile", app);
             $.evently.connect("#account", "#profile", ["loggedIn", "loggedOut"]);
-            $("#recent_notes").evently("recent_items", app);
+            $("#recent_notes").evently("recent_notes", app);
             $("#newnote").evently("newnote", app);
         });
         var selected = "new";
