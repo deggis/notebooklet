@@ -88,9 +88,16 @@ ul#mainmenu li a.selected, ul#mainmenu li a:hover {
     border-top: 1px solid #888;
 }
 
-span#tags {
-    color: #888;
+.new_tags_warning {
+    color: #d33;
+    font-weight: bold;
 }
+.new_tags_ok {
+    color: #3d3;
+    font-weight: bold;
+}
+
+
 
 form {
     padding: 4px;

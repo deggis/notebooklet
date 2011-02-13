@@ -46,7 +46,7 @@
                 </div>
                 <div id="content_all" class="content_box">
                     <h2>All</h2>
-                    <p>All notes are displayed paginated here.</p>
+                    <div id="all"></div>
                 </div>
                 <div id="content_settings" class="content_box">
                     <h2>Settings</h2>
@@ -69,6 +69,7 @@
             $.evently.connect("#account", "#profile", ["loggedIn", "loggedOut"]);
             $("#recent_notes").evently("recent_notes", app);
             $("#new_note").evently("new_note", app);
+            $("#all").evently("all", app);
         });
         var selected = "new";
         function menu(new_selected){
@@ -87,12 +88,14 @@
         function updateTags(){
             tags = $("#note").val().match(/\#[a-z]+/g);
             if (tags) {
-                tags = tags.join(", ");
+                tag_line = tags.join(", ");
+	        $("#new_tags").addClass("new_tags_ok").removeClass("new_tags_warning");
             }
             else {
-                tags = '(type words with #hash prefix to add tags)';
+                tag_line = "This note currently has no tags! Use #hashes to add them."
+             	$("#new_tags").removeClass("new_tags_ok").addClass("new_tags_warning");
             }
-            $("#tags").html(tags);
+            $("#new_tags").html(tag_line);
         }
         
         // $("#note").bind("change", updateTags);
