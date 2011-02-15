@@ -56,6 +56,7 @@
     </body>
     <script src="vendor/couchapp/loader.js"></script>
     <script type="text/javascript" charset="utf-8">
+    setTimeout(function() {
         $.couch.app(function(app){
             $("#account").evently("account", app);
             $("#profile").evently("profile", app);
@@ -63,7 +64,9 @@
             $("#recent_notes").evently("recent_notes", app);
             $("#new_note").evently("new_note", app);
             $("#all").evently("all", app);
-        });
+        })
+     }, 300);
+
         var selected = "new";
         function menu(new_selected){
             $("ul#mainmenu > li > a").removeClass("selected");
