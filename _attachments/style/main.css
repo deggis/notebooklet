@@ -173,3 +173,14 @@ div#recent-notes-set div {
 #note_view_dialog {
 	display: none;
 }
+
+
+.item {
+}
+.item_dark {
+  background-color: #cfc;
+}
+
+pre {
+  white-space: pre-wrap;
+}

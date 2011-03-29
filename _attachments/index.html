@@ -39,7 +39,8 @@
                 </div>
                 <div id="content_search" class="content_box">
                     <h2>Search</h2>
-                    <p>Search not implemented yet.</p>
+                    <div id="search_box"></div>
+                    <div id="search_results"></div>
                 </div>
                 <div id="content_all" class="content_box">
                     <h2>All notes</h2>
@@ -63,6 +64,8 @@
             $.evently.connect("#account", "#profile", ["loggedIn", "loggedOut"]);
             $("#recent_notes").evently("recent_notes", app);
             $("#new_note").evently("new_note", app);
+            $("#search_box").evently("search", app);
+            $("#search_results").evently("search_results", app);
             $("#all").evently("all", app);
         })
      }, 300);
@@ -80,6 +83,15 @@
 			var dialog_div = $("#note_view_dialog");
 			dialog_div.dialog();
 		}
+
+        function updateSearch() {
+           $("#search_results").trigger("fetch_results");
+           $(".item:odd").addClass("item_dark");
+        }
+
+        function getSearchTags() {
+           return $("#search_string").val().match(/\#[a-z]+/g);
+        }
         
         function updateTags(){
             tags = $("#note").val().match(/\#[a-z]+/g);
